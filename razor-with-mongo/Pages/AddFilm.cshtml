@@ -1,0 +1,35 @@
+﻿@page
+@model razor_with_mongo.Pages.AddFilmModel
+@{
+    ViewData["Title"] = "Add Film";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="filmTitle">Title</label>
+        <input type="text" class="form-control" id="filmTitle" name="FilmTitle">
+    </div>
+    <div class="form-group">
+        <label for="filmCertificate">Certificate</label>
+        <input type="text" class="form-control" id="filmCertificate" name="FilmCertificate">
+    </div>
+    <div class="form-group">
+        <label for="filmDescription">Description</label>
+        <textarea class="form-control" id="filmDescription" name="FilmDescription"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="filmPrice">Price</label>
+        <input type="number" step="0.01" class="form-control" id="filmPrice" name="FilmPrice">
+    </div>
+    <div class="form-group">
+        <label for="stars">Stars</label>
+        <input type="text" class="form-control" id="stars" name="Stars">
+    </div>
+    <div class="form-group">
+        <label for="releaseDate">Release Date</label>
+        <input type="date" class="form-control" id="releaseDate" name="ReleaseDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Add Film</button>
+</form>

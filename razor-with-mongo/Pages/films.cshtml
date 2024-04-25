@@ -1,0 +1,34 @@
+﻿@page
+@model filmsModel
+@{
+    // Import the necessary namespaces
+    //using Models;
+}
+
+<h1>List Films</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Certificate</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stars</th>
+            <th>Release Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var film in Model.Films)
+        {
+            <tr>
+                <td>@film.FilmTitle</td>
+                <td>@film.FilmCertificate</td>
+                <td>@film.FilmDescription</td>
+                <td>@film.FilmPrice</td>
+                <td>@film.Stars</td>
+                <td>@film.ReleaseDate.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>
